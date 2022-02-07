@@ -1,9 +1,31 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
+document.getElementById("btnJson").addEventListener("click", totalGhibliFilms);
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+function totalGhibliFilms(){
+  fetch("./data/ghibli/ghibli.json")
+    .then(function(res){
+      return res.json();
+    })
+    .then(function(data){
+      console.log(data);
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+// export const example = () => {
+//   return 'example';
+// };
+
+// export const anotherExample = () => {
+//   return 'OMG';
+// };
