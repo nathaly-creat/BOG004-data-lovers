@@ -21,39 +21,77 @@
         <nav>
           <div class="menuB">
             <button method="GET" name="button" id="btnJson">PELICULAS</button>
-            <button>PERSONAJES</button>
-            <button>LOCACION</button>
-            <button>VEHICULOS</button>
+            <button id="personajes">PERSONAJES</button>
+            <button id="botonRanking">RANKING</button>
             <button>ESTADISTICAS</button>
             <button>HOME</button>
+
+            <select name="peliculas" id="peliculas">
+              <option value=""></option>
+            </select>
           </div>
         </nav>
       </div>
     </header>
     <!-- close header -->
+
+    <!-- main body -->
+    <main>
+      <!-- PRIMERA VISTA HOME TARGETAS PELICULAS -->
+      <div>
+        <h4>PELICULAS
+          <hr>
+        </h4>
+        <div class="list" id="cards">
+          <ul id="list-dinamic">
+            <template> </template>
+          </ul>
+          <!-- <section id="listFilms"></section> -->
+        </div>
+
+        <!-- Aqui se muestra en el DOM el filter -->
+        <div id='tRankig_section'>
+
+        </div>
+
+        <!-- <hr> -->
+      </div>
+      <h4>PERSONAJES
+        <hr>
+      </h4>
+      <div id="div-personajes"></div>
+
+      <!-- order checkbox -->
+      <input type="checkbox" id="from_A-Z" name="from_A-Z">
+      <label for="from_A-Z">De la A-Z</label>
+      <input type="checkbox" id="from_Z-A" name="from_Z-A">
+      <label for="from_Z-A">De la Z-A</label>
+    </main>
+
+    <!-- footer-->
+    <!-- <footer>
+    <figure>
+      <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1644009302/ghibli_p3mzsk.jpg"
+        alt="Logo de Studio Ghibli">
+    </figure>
+
+    <ul>
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+    </ul>
+    <div class="container_mail">
+      <li><a href="https://mail.google.com" class="mail" target="_blank"
+          rel="noopener noreferrer"><span>Contáctanos</span><br>mailto:ghibli@email.com</a></li>
+    </div>
+
+  </footer> -->
+
   </div>
-
-<!-- footer-->
-<footer>
-  <figure>
-    <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1644009302/ghibli_p3mzsk.jpg" alt="Logo de Studio Ghibli">
-  </figure>
-
-  <ul>
-    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
-  </ul>
-  <div class="container_mail">
-    <li><a href="https://mail.google.com" class="mail" target="_blank" rel="noopener noreferrer"><span>Contáctanos</span><br>mailto:ghibli@email.com</a></li>
-  </div>
-  
-</footer>
- 
-
 
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
