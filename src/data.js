@@ -1,31 +1,34 @@
 // estas funciones son de ejemplo
 
-document.getElementById("btnJson").addEventListener("click", totalGhibliFilms);
+// // export const example = () => {
+// //   return 'example';
+// // };
 
-function totalGhibliFilms(){
-  fetch("./data/ghibli/ghibli.json")
-    .then(function(res){
-      return res.json();
-    })
-    .then(function(data){
-      console.log(data);
-    })
-}
+// // export const anotherExample = () => {
+// //   return 'OMG';
+// // };
+import data from "./data/ghibli/ghibli.js";
 
+export const filterRanking = (rankingScore) => {  
+  let tipeRanking = rankingScore; 
+    // let ranking = () => {
+    if(tipeRanking === 'Top'){
+      let arrayTop = data.films.filter(films => Number(films.rt_score) >= 83);
+       return arrayTop;
+    }else{
+      let arrayNoTop = data.films.filter(films => Number(films.rt_score) < 83);
+      return arrayNoTop;
+    }
+   
+ 
+};
 
+export const getPersonajes = (title, data) => {
+  let lengthPersonajes = data.films.length
 
-
-
-
-
-
-
-
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
+  for( let i = 0; i < lengthPersonajes; i++){
+    if( data.films[i].title == title){
+      return data.films[i].people
+    }
+  }
+};
