@@ -1,6 +1,17 @@
 import data from "./data/ghibli/ghibli.js"
 import {filterRanking} from "./data.js"
 
+// Mensaje de Bienvenida
+export function Saludo (){
+let welcome = document.createElement('div');
+welcome.createElement("div");
+welcome.innerHTML = `<div>
+<p> Bienvenidos a la fan Pages de Studio Ghibli</p>
+</div>`;
+
+document.body.appendChild(welcome);
+}; 
+
 export let peliculas = document.getElementById("main__header--options-boton-json");
 const lista = document.getElementById("main__body--peliculas-cards");
 peliculas.addEventListener("click", () => {
@@ -27,7 +38,7 @@ peliculas.addEventListener("click", () => {
 //   document.getElementById('personajes').addEventListener('click', ()=>{
 //     let personajes = getPersonajes("Castle in the Sky", data)
 //     console.log(personajes);    
-//     personajes.forEach(element => {
+//     personajes.forEach(element => 
 //         divPersonajes.innerHTML += `
 //             <li>${element.name}</li>
 //             <img src="${element.img}">    
@@ -37,6 +48,7 @@ peliculas.addEventListener("click", () => {
 
 let ranking = document.getElementById("main__header-options-boton-ranking");
 const tRanking = document.getElementById("main__body-raking");
+const visibilitypeliculas =  document.getElementById("main__body--peliculas-cards");
 // console.log(data)
 ranking.addEventListener("click", () => {
   let rankingTop = filterRanking(data.films);
@@ -49,15 +61,16 @@ ranking.addEventListener("click", () => {
         <p>Record: ${obj.rt_score}</p>
         </div>`;
   });
-
+  visibilitypeliculas.style.display = "none"
 });
 
 
 // reload button HOME
 
-// document.getElementById("header-options-boton-reload").addEventListener("click", () =>{
-//     location.reload("#peliculas")
-// })
+document.getElementById("main__header-options-boton-reload").addEventListener("click", () =>{
+    location.reload();
+    
+});
 
 
 
