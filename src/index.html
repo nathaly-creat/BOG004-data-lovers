@@ -15,20 +15,14 @@
     <!-- header -->
     <header>
       <!-- opciones del header -->
-      <div class="options_menu">
+      <div class="main__header">
         <!-- studio ghibli titulo principal de la pagina -->
-        <h1 class="title">STUDIO<br>GHIBLI</h1>
+        <h1 class="main__header--title">STUDIO<br>GHIBLI</h1>
         <nav>
-          <div class="menuB">
-            <button method="GET" name="button" id="btnJson">PELICULAS</button>
-            <button id="personajes">PERSONAJES</button>
-            <button id="botonRanking">RANKING</button>
-            <button>ESTADISTICAS</button>
-            <button>HOME</button>
-
-            <select name="peliculas" id="peliculas">
-              <option value=""></option>
-            </select>
+          <div class="main__header--options">
+            <button method="GET" name="button" id="main__header--options-boton-json">PELICULAS</button>
+            <button id="main__header-options-boton-ranking">TOP 10 PELICULAS</button>
+            <button id="main__header-options-boton-reload">HOME</button>
           </div>
         </nav>
       </div>
@@ -38,34 +32,28 @@
     <!-- main body -->
     <main>
       <!-- PRIMERA VISTA HOME TARGETAS PELICULAS -->
-      <div>
-        <h4>PELICULAS
-          <hr>
-        </h4>
-        <div class="list" id="cards">
-          <ul id="list-dinamic">
+      <div class ="main__body-peliculas">
+          <div id="main__body--peliculas-cards"> 
             <template> </template>
-          </ul>
+          </div>
           <!-- <section id="listFilms"></section> -->
         </div>
 
         <!-- Aqui se muestra en el DOM el filter -->
-        <div id='tRankig_section'>
+        <div id="main__body-raking"></div>
 
-        </div>
-
-        <!-- <hr> -->
-      </div>
-      <h4>PERSONAJES
-        <hr>
-      </h4>
-      <div id="div-personajes"></div>
+      <!--seccion personajes  -->
+      <!-- <div class ="main__body--personajes">
+        <h4>PERSONAJES
+          <hr>
+        </h4>
+      </div> -->
 
       <!-- order checkbox -->
-      <input type="checkbox" id="from_A-Z" name="from_A-Z">
+      <!-- <input type="checkbox" id="from_A-Z" name="from_A-Z">
       <label for="from_A-Z">De la A-Z</label>
       <input type="checkbox" id="from_Z-A" name="from_Z-A">
-      <label for="from_Z-A">De la Z-A</label>
+      <label for="from_Z-A">De la Z-A</label> -->
     </main>
 
     <!-- footer-->

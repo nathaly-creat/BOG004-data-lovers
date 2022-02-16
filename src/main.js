@@ -1,17 +1,8 @@
-// import { example } from './data.js';
-// // import data from './data/lol/lol.js';
-// // import data from './data/ghibli/ghibli.json'
-// import data from './data/rickandmorty/rickandmorty.js';
-
-// import { totalGhibliFilms } from './data.js';         
-// console.log(totalGhibliFilms)
-
 import data from "./data/ghibli/ghibli.js"
-import {getPersonajes, filterRanking} from "./data.js"
+import {filterRanking} from "./data.js"
 
-export let peliculas = document.getElementById("btnJson");
-const lista = document.getElementById("list-dinamic");
-// let lista = document.querySelector('.lista');
+export let peliculas = document.getElementById("main__header--options-boton-json");
+const lista = document.getElementById("main__body--peliculas-cards");
 peliculas.addEventListener("click", () => {
   let peliculasData = data.films;
   let template = "";
@@ -32,58 +23,68 @@ peliculas.addEventListener("click", () => {
   lista.innerHTML = template; 
 });
 
-let divPersonajes = document.getElementById("div-personajes");
-  document.getElementById('personajes').addEventListener('click', ()=>{
-    let personajes = getPersonajes("Castle in the Sky", data)
-    console.log(personajes);    
-    personajes.forEach(element => {
-        divPersonajes.innerHTML += `
-            <li>${element.name}</li>
-            <img src="${element.img}">    
-        `
-    });
-})
+// let divPersonajes = document.getElementById("div-personajes");
+//   document.getElementById('personajes').addEventListener('click', ()=>{
+//     let personajes = getPersonajes("Castle in the Sky", data)
+//     console.log(personajes);    
+//     personajes.forEach(element => {
+//         divPersonajes.innerHTML += `
+//             <li>${element.name}</li>
+//             <img src="${element.img}">    
+//         `
+//     });
+// })
 
-let ranking = document.getElementById("botonRanking");
-const tRanking = document.getElementById('tRankig_section');
-
+let ranking = document.getElementById("main__header-options-boton-ranking");
+const tRanking = document.getElementById("main__body-raking");
+// console.log(data)
 ranking.addEventListener("click", () => {
-  let rankingTop = filterRanking("Top");
+  let rankingTop = filterRanking(data.films);
 //  console.log(rankingTop)
 // console.log(tRanking)
   rankingTop.forEach((obj) => {
       tRanking.innerHTML += `<div class="cards">
         <img src='${obj.poster}'> 
         <p>Titulo: ${obj.title}</p>
-        <p>Puntaje: ${obj.rt_score}</p>
-        
+        <p>Record: ${obj.rt_score}</p>
         </div>`;
   });
+
 });
 
 
-// prueba checkbox
-let fromAToZ = document.getElementById("from_A-Z")
-let fromZToA = document.getElementById("from_Z-A")
-let personajesPonyo = ["sosuke", "lisa", "kumiko", "ponyo"];
+// reload button HOME
 
-fromAToZ.addEventListener("click", () => {
-    personajesPonyo.sort();
-    console.log(personajesPonyo);
+// document.getElementById("header-options-boton-reload").addEventListener("click", () =>{
+//     location.reload("#peliculas")
+// })
+
+
+
+
+
+// // prueba checkbox
+// let fromAToZ = document.getElementById("from_A-Z")
+// let fromZToA = document.getElementById("from_Z-A")
+// let personajesPonyo = ["sosuke", "lisa", "kumiko", "ponyo"];
+
+// fromAToZ.addEventListener("click", () => {
+//     personajesPonyo.sort();
+//     console.log(personajesPonyo);
 
     
     
-    fromZToA.disabled = true;
-})
+//     fromZToA.disabled = true;
+// })
 
-fromZToA.addEventListener("click", () => {
-    personajesPonyo.sort();
+// fromZToA.addEventListener("click", () => {
+//     personajesPonyo.sort();
 
-    let personajesPonyoFromAToZ = [];
-    personajesPonyoFromAToZ = personajesPonyo.sort();
+//     let personajesPonyoFromAToZ = [];
+//     personajesPonyoFromAToZ = personajesPonyo.sort();
 
-    personajesPonyoFromAToZ.reverse();
-    console.log(personajesPonyoFromAToZ);
+//     personajesPonyoFromAToZ.reverse();
+//     console.log(personajesPonyoFromAToZ);
 
-    fromAToZ.disabled = true
-})
+//     fromAToZ.disabled = true
+// })
