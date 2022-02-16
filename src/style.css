@@ -10,14 +10,7 @@
     margin-left: 125px;
 }
 
-.options_menu {
-    display: flex;
-    justify-content: space-between;
-    
-    align-items: center;
-}
-
-.title {
+.main__header--title {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -27,14 +20,19 @@
     
 }
 
-.title h1 {
+.main__header--title h1 {
     display: flex;
     align-content: center;
     margin-top: 50px;
 }
 
+.main__header--options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
 
-.menuB button {
+.main__header--options button {
     width: 100px;
     height: 30px;
     display: inline;
@@ -46,7 +44,7 @@
     margin-top: -15px;
 }
 
-.menuB button:hover {
+.main__header--options button:hover {
     background-color: black;
     color: white;
 }
@@ -68,4 +66,25 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+#main__body--peliculas-cards{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px; 
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+
+}
+
+#main__body-raking{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px; 
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;  
 }
