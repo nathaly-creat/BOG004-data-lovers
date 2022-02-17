@@ -10,7 +10,7 @@ welcome.innerHTML = `<div>
 </div>`;
 
 document.body.appendChild(welcome);
-}; 
+}
 
 export let peliculas = document.getElementById("main__header--options-boton-json");
 const lista = document.getElementById("main__body--peliculas-cards");
@@ -19,14 +19,12 @@ peliculas.addEventListener("click", () => {
   let template = "";
   peliculasData.forEach((obj) => {
     template += `
-            <div class="cards">
-            <img id='images' src='${obj.poster}'> 
-            <p id = "">${obj.title}</p>
-            <p>${obj.release_date}</p>
-            <p>Descripción:${obj.description}</p>
-            <p>Productor:${obj.producer}</p>
-            <p>Director:${obj.director}</p>
-            <button id='details'> Detalles</button>
+            <div class='prueba'>
+              <img id='images' src='${obj.poster}'> 
+              <p id = "">${obj.title}</p>
+              <p>${obj.release_date}</p>
+              
+              <button id='details'> Detalles</button>
             </div>     
         `;
   });
@@ -43,8 +41,10 @@ peliculas.addEventListener("click", () => {
 //             <li>${element.name}</li>
 //             <img src="${element.img}">    
 //         `
-//     });
-// })
+//     })
+// };
+
+
 
 let ranking = document.getElementById("main__header-options-boton-ranking");
 const tRanking = document.getElementById("main__body-raking");
@@ -55,7 +55,7 @@ ranking.addEventListener("click", () => {
 //  console.log(rankingTop)
 // console.log(tRanking)
   rankingTop.forEach((obj) => {
-      tRanking.innerHTML += `<div class="cards">
+      tRanking.innerHTML += `<div>
         <img src='${obj.poster}'> 
         <p>Titulo: ${obj.title}</p>
         <p>Record: ${obj.rt_score}</p>

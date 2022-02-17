@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/4de09098c3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://kit.fontawesome.com/4de09098c3.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <div id="root">
-    <!-- header -->
-    <header>
-      <!-- opciones del header -->
-      <div class="main__header">
-        <!-- studio ghibli titulo principal de la pagina -->
-        <h1 class="main__header--title">STUDIO<br>GHIBLI</h1>
+  <body>
+    <div id="root">
+      <!-- header -->
+      <header>
+        <!-- opciones del header -->
         <nav>
-          <div class="main__header--options">
-            <button method="GET" name="button" id="main__header--options-boton-json">PELICULAS</button>
-            <button id="main__header-options-boton-ranking">TOP 10 PELICULAS</button>
-            <button id="main__header-options-boton-reload">HOME</button>
+          <div class="main__header--title-options">
+            <!-- studio ghibli titulo principal de la pagina -->
+            <div class="main__header--title">
+              <h1><span>STUDIO</span><br>GHIBLI</h1>
+            </div>
+            <div class="main__header--options" >
+              <button
+                method="GET"
+                name="button"
+                id="main__header--options-boton-json"
+                class="main__header--options-button"
+              >
+                PELICULAS
+              </button>
+              <button
+                id="main__header-options-boton-ranking"
+                class="main__header--options-button"
+              >
+                TOP 10 PELICULAS
+              </button>
+              <button
+                id="main__header-options-boton-reload"
+                class="main__header--options-button"
+              >
+                HOME
+              </button>
+            </div>
           </div>
         </nav>
-      </div>
-    </header>
-    <!-- close header -->
+      </header>
+      <!-- close header -->
 
-    <!-- main body -->
+      <!-- main body FLEXBOX -->
     <main>
+      <section class="flex-container">
         <!-- primera card primera vista -->
-        <section id="main__body--welcome">
-            <div id="main__body--primera-card">
-               
-            </div>
-        </section>
-        
-      <!-- PRIMERA VISTA HOME TARGETAS PELICULAS -->
-      <section>
-        <div class ="main__body--peliculas">
-            <div id="main__body--peliculas-cards"> 
+        <div class="'flex-items-2" id="main__body--welcome">
+          <div id="main__body--primera-card"></div>
+        </div class="'flex-items">
+
+        <!-- PRIMERA VISTA HOME TARGETAS PELICULAS -->
+        <div class="flex-items">
+          <div class="main__body--peliculas">
+            <div id="main__body--peliculas-cards">
               <template> </template>
             </div>
-        </div>
-      </section>
-        
-      <!-- Aqui se muestra en el DOM el filter -->
-      <section>
-        <div id="main__body-raking"></div>
-      </section>
-        
+          </div>
+        </div class="'flex-items">
 
-      <!--seccion personajes  -->
-      <!-- <div class ="main__body--personajes">
+        <!-- Aqui se muestra en el DOM el filter -->
+        <div class="'flex-items">
+          <div id="main__body-raking"></div>
+        </div class="'flex-items">
+
+        <!--seccion personajes  -->
+        <!-- <div class ="main__body--personajes">
         <h4>PERSONAJES
           <hr>
         </h4>
       </div> -->
 
-      <!-- order checkbox -->
-      <!-- <input type="checkbox" id="from_A-Z" name="from_A-Z">
+        <!-- order checkbox -->
+        <!-- <input type="checkbox" id="from_A-Z" name="from_A-Z">
       <label for="from_A-Z">De la A-Z</label>
       <input type="checkbox" id="from_Z-A" name="from_Z-A">
       <label for="from_Z-A">De la Z-A</label> -->
+      </section>
     </main>
 
-    <!-- footer-->
-    <!-- <footer>
+      <!-- footer-->
+      <!-- <footer>
     <figure>
       <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1644009302/ghibli_p3mzsk.jpg"
         alt="Logo de Studio Ghibli">
@@ -86,11 +106,8 @@
     </div>
 
   </footer> -->
+    </div>
 
-  </div>
-
-  <script src="main.js" type="module"></script>
-
-</body>
-
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
