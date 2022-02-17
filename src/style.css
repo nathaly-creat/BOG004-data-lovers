@@ -4,69 +4,180 @@
     font-family: monospace;
     
 }
-
-#root {
-    margin-right: 125px;
-    margin-left: 125px;
+body {
+    width: 100vw;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    background-image: url('https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645114044/wallpaperbetter_aaylbv.jpg');
 }
 
-.main__header--title {
+/* #root {
+    margin-right: 125px;
+    margin-left: 125px;
+    
+    
+} */
+/* contenedor del menu */
+/* padre */
+.main__header--title-options {
+    background-color: black;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
+      
+   
+
+}
+/* hijos */
+.main__header--title {
+    background-color: yellowgreen;
+    margin: 50px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
     font-family: monospace;
-    font-size: 60px;
-    margin-top: 50px;
+    font-size: 20px;
+    margin-top: 10px;
+    
     
 }
 
-.main__header--title h1 {
-    display: flex;
-    align-content: center;
-    margin-top: 50px;
-}
-
 .main__header--options {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
-.main__header--options button {
-    width: 100px;
-    height: 30px;
-    display: inline;
-    margin: 20px;
-    position: relative;
-    z-index: 6;
-    border: 0;
-    background-color: transparent;
-    margin-top: -15px;
-}
-
-.main__header--options button:hover {
     background-color: black;
+    margin: 20px;
+    justify-content: space-around;
     color: white;
+    
+    
+    
+}
+.main__header--options-button {
+   justify-content: space-between;
+   align-content: space-between;
+   padding: 20px;
+   margin: 25px;
+   border: 0;
+   background-color: transparent;
+   font-size: 15px;
+   background-color: black;
+   color: white;
 }
 
+.main__header--options-button:hover{
+    background-color: rgb(42, 165, 73) !important; 
+    color: white;
+    padding: 10px;
+}
+
+/* Section cards // main listo */
+
+main { 
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+   
+}
+/* flex padre */
+.flex-container {
+    display: grid;
+ 
+    column-gap: 50px;
+    margin: auto;
+    width: 800px;
+    /* background-color: chartreuse; */
+    width: auto;
+      
+    
+}
+
+/* .flex-items {
+    display: block;
+    margin: 80px;
+    align-content: center;
+} */
+
+div .prueba {
+    margin-bottom: 30px;
+    width: 130px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+    
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#images {
+    width: 100%;
+    border-radius: 20px;
+    
+}
+
+#main__body--peliculas-cards{
+    
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.159);
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;  */
+    width: 90%; 
+    height: 50%;
+    justify-content: space-around;
+    align-items: center;
+    /* grid-gap: 10px; */
+    visibility: visible;
+    margin: auto;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+
+
+ 
 footer {
     background: white;
 }
 
-/* seccion copiada desde nathy */
+seccion copiada desde nathy 
 body {
     height: 200px;
 }
-/*main*/
-main {
-    width: 100%;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+
 
 #main__body--peliculas-cards{
     background-color: aqua;
@@ -95,6 +206,6 @@ main {
     width: 100%;
     height: 10%;
     visibility: visible;
-}
+} 
 
-
+ */
