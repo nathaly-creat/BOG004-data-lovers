@@ -1,6 +1,15 @@
 import data from "./data/ghibli/ghibli.js"
 import {filterRanking} from "./data.js"
 
+
+// reload button HOME
+
+document.getElementById("main__header-options-boton-reload").addEventListener("click", () =>{
+  location.reload();
+  
+});
+
+
 // Mensaje de Bienvenida
 export function Saludo (){
 let welcome = document.createElement('div');
@@ -17,32 +26,57 @@ const lista = document.getElementById("main__body--peliculas-cards");
 peliculas.addEventListener("click", () => {
   let peliculasData = data.films;
   let template = "";
-  peliculasData.forEach((obj) => {
+  peliculasData.forEach((obj, index) => {
     template += `
             <div class='prueba'>
               <img id='images' src='${obj.poster}'> 
               <p id = "">${obj.title}</p>
               <p>${obj.release_date}</p>
-              
-              <button id='details'> Detalles</button>
-            </div>     
-        `;
+              <button id='details-${index}'>Detalles</button>
+            </div>`;
   });
-
   lista.innerHTML = template; 
+  // puedo ir por el boton y asignarle un evento
+  
+peliculasData.map(function(film, index){
+  console.log(film,index);
+    const detallesPelicula = document.getElementById('details-'+index);
+    detallesPelicula.addEventListener('click', ()=>{
+     
+      let x = film.people;
+      x.forEach((people) =>{
+        document.getElementById("list-personaje").innerHTML += 
+      `<div>
+          <p>${people.name}</p>
+      <img src="${people.img}">
+      </div>
+      `;
+      })
+      
+      
+    });
+  });
 });
 
-// let divPersonajes = document.getElementById("div-personajes");
-//   document.getElementById('personajes').addEventListener('click', ()=>{
-//     let personajes = getPersonajes("Castle in the Sky", data)
-//     console.log(personajes);    
-//     personajes.forEach(element => 
-//         divPersonajes.innerHTML += `
-//             <li>${element.name}</li>
-//             <img src="${element.img}">    
-//         `
-//     })
-// };
+
+
+
+
+//   peliculasData.forEach((film, index) => {
+//     const detallesPelicula = document.getElementById('details-'+index);
+//     detallesPelicula.addEventListener('click', ()=>{
+//       console.log(film);
+      
+//       document.getElementById("list-personaje").textContent += 
+//       `<div>
+//           <li>${film.people[index]}</li>
+//       <img src="${film.people[index]}"> </div>
+//       `;
+      
+//     });
+//   });
+ 
+
 
 
 
@@ -65,15 +99,36 @@ ranking.addEventListener("click", () => {
 });
 
 
-// reload button HOME
 
-document.getElementById("main__header-options-boton-reload").addEventListener("click", () =>{
-    location.reload();
-    
-});
+//  personajes
+// let detallePelicula = document.getElementById('details');
+// let personajeLista = document.getElementById('list-personaje')
+// // let divPersonajes = document.querySelector(".list-personaje");
+// detallePelicula.addEventListener('click', ()=>{
+
+//   let peoplesTotal = filterPeople(data.films);
+//   peoplesTotal.forEach((obj) => {
+//     personajeLista.innerHTML += `<div>
+//     <li>${obj.name}</li>
+// <img src="${obj.img}"> </div>
+// `;
+
+//   })
+// });
 
 
 
+// let divPersonajes = document.getElementById("div-personajes");
+//   document.getElementById('personajes').addEventListener('click', ()=>{
+//     let personajes = getPersonajes("Castle in the Sky", data)
+//     // console.log(personajes);    
+//     personajes.forEach(element =>{  
+//         divPersonajes.innerHTML += `
+//             <li>${element.name}</li>
+//             <img src="${element.img}">    
+//         `
+//     })
+//   });
 
 
 // // prueba checkbox
@@ -85,7 +140,6 @@ document.getElementById("main__header-options-boton-reload").addEventListener("c
 //     personajesPonyo.sort();
 //     console.log(personajesPonyo);
 
-    
     
 //     fromZToA.disabled = true;
 // })

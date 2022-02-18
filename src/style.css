@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,11 +9,9 @@
 body {
     width: 100vw;
     max-height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(95, 92, 92);
+    background-image: linear-gradient(180deg,rgb(2, 8, 89), #062448, #0d4b97,#236dc7 , #00d4ff)
     
-    background-image: url('https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645114044/wallpaperbetter_aaylbv.jpg');
 }
 
 /* #root {
@@ -23,17 +23,22 @@ body {
 /* contenedor del menu */
 /* padre */
 .main__header--title-options {
-    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645114044/wallpaperbetter_aaylbv.jpg');
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 150px;
+    box-shadow: 0px 0.5px 10px rgb(238, 231, 231);
       
    
 
 }
 /* hijos */
 .main__header--title {
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     margin: 50px;
     display: block;
     justify-content: space-between;
@@ -45,29 +50,42 @@ body {
     
 }
 
+.list-personaje {
+  color: white;
+  background-color: red;
+  height: 10px;
+  padding: 50px;
+}
+
 .main__header--options {
-    background-color: black;
+    background-color: transparent;
     margin: 20px;
     justify-content: space-around;
-    color: white;
+    color: rgb(43, 171, 209);
     
-    
+ 
     
 }
+
 .main__header--options-button {
    justify-content: space-between;
    align-content: space-between;
-   padding: 20px;
-   margin: 25px;
-   border: 0;
+   padding: 5px;
+   margin: 20px;
+   border: 0 0 0;
+   font-family: 'Balsamiq Sans', cursive;
+   border-radius: 10px;
    background-color: transparent;
    font-size: 15px;
-   background-color: black;
+   /* background-color: black; */
    color: white;
+   box-shadow: 0px 0.5px 10px rgb(238, 231, 231);
+   transition: all 400ms ease-out;
+   cursor: pointer;
 }
 
 .main__header--options-button:hover{
-    background-color: rgb(42, 165, 73) !important; 
+    background-color: rgb(106, 151, 218) !important; 
     color: white;
     padding: 10px;
 }
@@ -134,50 +152,87 @@ div .prueba {
     margin: auto;
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
-
-
-
  
 footer {
-    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 20px;
+    margin-top: 100px;
+    height: 15%;
+    border: 2px solid rgb(0, 153, 255);
+    /* border-radius: 25px; */
+    box-shadow: 0px 0.5px 10px #00d4ff;
+        
 }
 
-seccion copiada desde nathy 
-body {
-    height: 200px;
-}
+footer ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  footer ul li{
+  padding: 15px;
+  font-size: 20px;
+  list-style: none;
+  }
 
+i{
+    background-color: honeydew;
+    padding: 10px;
+    border-radius: 50%;
+    
+    -webkit-box-shadow: 0px 2px 12px -2px rgba(31, 31, 31, 0.75);
+    -moz-box-shadow: 0px 2px 12px -2px rgba(31, 31, 31, 0.75);
+    box-shadow: 0px 2px 12px -2px rgba(31, 31, 31, 0.75);
+    font-size: 20px;
+  }
+  .fa-facebook{
+    color: #1877f2;
+  }
+  
+  .fa-instagram{
+    color: #e1306c;
+  }
+  
+  .fa-twitter{
+    color: #1da1f2;
+  }
+  
+  .fa-linkedin{
+    color: #0072b1;
+  }
+  .mail{
+    font-size: 20px;
+   
+  }
+  .container_mail li{
+    list-style: none;
+  }
+  
+  .container_mail a{
+    text-decoration: none;
+    
+  }
+  .container_mail span{
+    color: rgb(11, 2, 87);
+    font-weight: 700;
+    border-bottom: 1px solid grey;
+  }
+
+
+  .main__body--personajes {
+    color: white;
+    padding: 30px;
+  }
+
+  .checkbox {
+    padding: 30px;
+
+  }
+
+/* 
 
 #main__body--peliculas-cards{
     background-color: aqua;

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script
@@ -21,7 +22,9 @@
           <div class="main__header--title-options">
             <!-- studio ghibli titulo principal de la pagina -->
             <div class="main__header--title">
-              <h1><span>STUDIO</span><br>GHIBLI</h1>
+              <figure>
+                <img src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645206938/letras_xrdjw6.png" alt="studioghibli" width="220" height="130">
+              </figure>
             </div>
             <div class="main__header--options" >
               <button
@@ -64,6 +67,7 @@
             <div id="main__body--peliculas-cards">
               <template> </template>
             </div>
+           
           </div>
         </div class="'flex-items">
 
@@ -72,40 +76,46 @@
           <div id="main__body-raking"></div>
         </div class="'flex-items">
 
-        <!--seccion personajes  -->
-        <!-- <div class ="main__body--personajes">
+        <!-- seccion personajes  -->
+        <div class ="main__body--personajes">
         <h4>PERSONAJES
           <hr>
+          <div id="list-personaje" class="list-personaje">
+              
+          </div>
         </h4>
-      </div> -->
+      </div> 
 
         <!-- order checkbox -->
-        <!-- <input type="checkbox" id="from_A-Z" name="from_A-Z">
+        <div class="checkbox">
+          <input type="checkbox" id="from_A-Z" name="from_A-Z">
       <label for="from_A-Z">De la A-Z</label>
       <input type="checkbox" id="from_Z-A" name="from_Z-A">
-      <label for="from_Z-A">De la Z-A</label> -->
+      <label for="from_Z-A">De la Z-A</label>
+        </div>
+      
       </section>
     </main>
 
-      <!-- footer-->
-      <!-- <footer>
-    <figure>
-      <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1644009302/ghibli_p3mzsk.jpg"
-        alt="Logo de Studio Ghibli">
-    </figure>
+       <!-- footer -->
+      <footer>
+        <div class="container_mail">
+          <li><a href="https://mail.google.com" class="mail" target="_blank"
+              rel="noopener noreferrer"><span>Contáctanos</span><br>studioghibli@email.com</a></li>
+        </div>
 
-    <ul>
-      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
-    </ul>
-    <div class="container_mail">
-      <li><a href="https://mail.google.com" class="mail" target="_blank"
-          rel="noopener noreferrer"><span>Contáctanos</span><br>mailto:ghibli@email.com</a></li>
-    </div>
-
-  </footer> -->
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+        </ul>
+    
+        <figure>
+          <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645193225/logo_gptvbp.png"
+            alt="Logo de Studio Ghibli" width="350" height="150">
+        </figure>
+      </footer> 
     </div>
 
     <script src="main.js" type="module"></script>
