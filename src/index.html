@@ -30,13 +30,13 @@
               <button
                 method="GET"
                 name="button"
-                id="main__header--options-boton-json"
+                id="main__header--options-button-json"
                 class="main__header--options-button"
               >
                 PELICULAS
               </button>
               <button
-                id="main__header-options-boton-ranking"
+                id="main__header-options-button-ranking"
                 class="main__header--options-button"
               >
                 TOP 10 PELICULAS
@@ -76,24 +76,32 @@
           <div id="main__body-raking"></div>
         </div class="'flex-items">
 
+        <!-- seccion card pelicula elegida -->
+      
+        <div class = "main__card--peliculas" id = "seccion-peliculas">
+          <h4>PELICULA</h4>
+          <hr>
+          <div id = "main__card--peliculas-select">
+
+          </div>
+         </div>
+        
+        <!-- order checkbox -->
+        <div class="checkbox" id="orderCheck">
+          <input type="checkbox" id="from_A-Z" name="from_A-Z">
+          <label for="from_A-Z">De la A-Z</label>
+          <input type="checkbox" id="from_Z-A" name="from_Z-A">
+          <label for="from_Z-A">De la Z-A</label>
+        </div>
+
         <!-- seccion personajes  -->
-        <div class ="main__body--personajes">
-        <h4>PERSONAJES
+        <div class ="main__body--personajes" id = "seccion-personajes">
+          <h4>PERSONAJES</h4>
           <hr>
           <div id="list-personaje" class="list-personaje">
-              
-          </div>
-        </h4>
-      </div> 
 
-        <!-- order checkbox -->
-        <div class="checkbox">
-          <input type="checkbox" id="from_A-Z" name="from_A-Z">
-      <label for="from_A-Z">De la A-Z</label>
-      <input type="checkbox" id="from_Z-A" name="from_Z-A">
-      <label for="from_Z-A">De la Z-A</label>
+          </div>
         </div>
-      
       </section>
     </main>
 
