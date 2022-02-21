@@ -17,7 +17,7 @@ export const getPersonajes = (title, data) => {
 };
 
 export const peopleOrden = (data) => {
-  console.log(data)
+  // console.log(data)
     let arrayPeople = []
     data.forEach((element) => {
       arrayPeople.push(element.people)
@@ -25,8 +25,9 @@ export const peopleOrden = (data) => {
     // arrayPeopleS.array.forEach((people, index) => {
     //   return pe    
     // });
-    console.log(".people", arrayPeople)
-    let ordenado = arrayPeople.sort((a, b) => {
+    // console.log(".people", arrayPeople)
+
+   let ordenado = arrayPeople.sort((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
@@ -43,7 +44,13 @@ export const peopleOrden = (data) => {
   //     return arrayPeopleS.reverse();
   //   }
       
+  let reverseArray = ordenado.reverse()
+  console.log('reverso', reverseArray)
+
+
    };
+    
+   
 
 
 
