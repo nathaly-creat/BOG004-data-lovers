@@ -1,36 +1,41 @@
 import data from "./data/ghibli/ghibli.js"
-import {filterRanking, peopleOrden} from "./data.js"
+import {filterRanking, peliculasOrden} from "./data.js"
 const peliculasData = data.films;
 
-// reload button HOME
+let peliculas = document.getElementById("main__header--options-button-json");
+const lista = document.getElementById("main__body--peliculas-cards");
+const seccionPelicula = document.getElementById("seccion-peliculas");
+const seccionPersonajes = document.getElementById("seccion-personajes");
+const orderPeliculas= document.getElementById("orderPeliculas")
+const peliculaSeleccionada = document.getElementById("main__card--peliculas-select");
+
+/*reload button HOME*/
 
 document.getElementById("main__header-options-boton-reload").addEventListener("click", () =>{
-  location.reload();
+  orderPeliculas.style.display= "none"
+  location.reload('div');
   
 });
 
 
-// Mensaje de Bienvenida
-export function Saludo (){
-  let welcome = document.createElement('div');
-  welcome.createElement("div");
-  welcome.innerHTML = `<div>
-  <p> Bienvenidos a la fan Pages de Studio Ghibli</p>
-  </div>`;
-  document.body.appendChild(welcome);
-}
-
-export let peliculas = document.getElementById("main__header--options-button-json");
-const lista = document.getElementById("main__body--peliculas-cards");
-const seccionPelicula = document.getElementById("seccion-peliculas");
-const seccionPersonajes = document.getElementById("seccion-personajes");
-const orderCheck = document.getElementById("orderCheck")
-const peliculaSeleccionada = document.getElementById("main__card--peliculas-select");
-
+/* Mensaje de Bienvenida*/
+ let btnHome = document.getElementById('main__header-options-boton-reload');
+ orderPeliculas.style.display = 'none'
+ btnHome.addEventListener('click', ()=>{
+  location.reload('div');
+  
+    let welcome = document.createElement('div');
+    welcome.createElement("div");
+    welcome.innerHTML = `<div>
+    <p> Bienvenidos a la fan Pages de Studio Ghibli</p>
+    </div>`;
+    document.body.appendChild(welcome);})
+ 
+  
 
 peliculas.addEventListener("click", () => {
-  
-  let template = "";
+  orderPeliculas.style.display = 'inline'
+  let template = " ";
  
   peliculasData.forEach((obj, index) => {
     template += `
@@ -51,7 +56,7 @@ peliculas.addEventListener("click", () => {
       // oculta peliculas menu
       lista.style.display = "none"
       // muestra seccion personajes
-      orderCheck.style.display= "inline"
+      orderPeliculas.style.display= "none" /* Con none puedo ocultar el sort de las cards peliculas*/
       seccionPersonajes.style.display = "inline"
       seccionPelicula.style.display = "inline"
       peliculaSeleccionada.innerHTML += `
@@ -87,6 +92,7 @@ const tRanking = document.getElementById("main__body-raking");
 const visibilitypeliculas =  document.getElementById("main__body--peliculas-cards");
 // console.log(data)
 ranking.addEventListener("click", () => {
+  orderPeliculas.style.display= "none"
   let rankingTop = filterRanking(data.films);
 //  console.log(rankingTop)
 // console.log(tRanking)
@@ -100,27 +106,21 @@ ranking.addEventListener("click", () => {
   visibilitypeliculas.style.display = "none"
 });
 
-// let personajeLista = document.getElementById('list-personaje')
-// // let divPersonajes = document.querySelector(".list-personaje");
+// peliculasOrden(peliculasData);
+// Manejo del Select con sort.
+
+let orderSelect = document.querySelector('.orderPeliculas')
+orderSelect.addEventListener('change', sortPeliculas)
+
+function sortPeliculas (e){ 
+  let order = e.target.value;
+  let sorting =  peliculasOrden(peliculasData, order)
+  //   /*OJOOOOOOOO: quiero crear en esta seccion la manipulacion del DOM que me permita revertir la posicion de las cards, en consola si se aprecia.*/
+
+  console.log('render1', sorting)
+}
 
 
-// fromAToZ.addEventListener("click", () => {
-//   personajesPonyo.sort();;
-//   console.log(personajesPonyo);;
-// // 
-    
-//   fromZToA.disabled = true;
-// })
 
-// fromZToA.addEventListener("click", () => {
-//     personajesPonyo.sort();
 
-//   let personajesPonyoFromAToZ = [];
-//     personajesPonyoFromAToZ = personajesPonyo.sort();
 
-//   personajesPonyoFromAToZ.reverse();
-//     console.log(personajesPonyoFromAToZ);
-
-//   fromAToZ.disabled = trues
-// })
-peopleOrden(peliculasData)
