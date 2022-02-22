@@ -16,61 +16,18 @@ export const getPersonajes = (title, data) => {
 
 };
 
+
 export const peliculasOrden = (data,order)=>{
-  let peopleSort = data.sort((a,z)=>{
+  let titleSort = data.sort((a,z)=>{
     return (a.title > z.title) ? 1:-1
   })
-  // console.log(peopleSort) 
-  if(order === 'ascendente'){peopleSort}
-  if(order === 'descendente'){peopleSort.reverse()}
+  // console.log(titleSort) 
+  if(order === 'ascendente'){titleSort}
+  if(order === 'descendente'){titleSort.reverse()}
  
-  return peopleSort;
+  return titleSort;
 }
 
 
-
-// export const peopleOrden = (data) => {
-//   // console.log(data)
-//     let arrayPeople = []
-//     data.forEach((element) => {
-//       arrayPeople.push(element.people)
-//     });
-//     // arrayPeopleS.array.forEach((people, index) => {
-//     //   return pe    
-//     // });
-//     // console.log(".people", arrayPeople)
-
-//    let ordenado = arrayPeople.sort((a, b) => {
-//       if (a.name > b.name) {
-//         return 1;
-//       }
-//       if (a.name < b.name) {
-//         return -1;
-//       }
-//       // a must be equal to b
-//       return 0;
-//     })
-//     console.log("ordenado", ordenado)
-
-//     // if (peopleOrden === "Ascendente A-Z"){
-//     //   return arrayPeopleS.sort();
-//     // }  else if (peopleOrden === "Descendente Z-A"){
-//     //   return arrayPeopleS.reverse();
-//     // }
-      
-//   let reverseArray = ordenado.reverse()
-//   console.log('reverso', reverseArray)
-
-
-//    };
-    
-   
-
-
-
-// // export const ordenadorA-Z = (people) => {
-// //   people.sort();
-// //    console.log(people.sort());
-// // }
 
 
