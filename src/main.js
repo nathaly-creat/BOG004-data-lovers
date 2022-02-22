@@ -35,13 +35,14 @@ document.getElementById("main__header-options-boton-reload").addEventListener("c
 
 peliculas.addEventListener("click", () => {
   orderPeliculas.style.display = 'inline'
+  peliculas.style.display = 'inline';
   let template = " ";
  
   peliculasData.forEach((obj, index) => {
     template += `
-    <div id='prueba'>
+    <div id='template--cards'>
     <img id='images' src='${obj.poster}'> 
-    <p id = "">${obj.title}</p>
+    <p>${obj.title}</p>
     <p>${obj.release_date}</p>
     <button id='details-${index}'>Detalles</button>
     </div>`;
@@ -117,7 +118,8 @@ function sortPeliculas (e){
   let sorting =  peliculasOrden(peliculasData, order)
   //   /*OJOOOOOOOO: quiero crear en esta seccion la manipulacion del DOM que me permita revertir la posicion de las cards, en consola si se aprecia.*/
 
-  console.log('render1', sorting)
+  // console.log('render1', sorting)
+  return sorting; 
 }
 
 
