@@ -124,6 +124,7 @@ main {
     width: 800px;
     /* background-color: chartreuse; */
     width: auto;
+   
       
     
 }
@@ -134,7 +135,7 @@ main {
     align-content: center;
 } */
 
-div #prueba {
+div #template--cards {
     margin-bottom: 30px;
     width: 130px;
     background-color: transparent;
@@ -146,7 +147,7 @@ div #prueba {
     
     /* justify-content: center;
     align-items: center; */
-}
+} 
 
 #images {
     width: 100%;
@@ -279,13 +280,18 @@ i{
 
   }
 
-  .flex-items--filter {
-    display: flex;
-   
-    justify-content: center;
-    align-items: center;
+.flex-items--filter {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.159);
+  width: 90%; 
+  height: 80%;
+  justify-content: space-around;
+  align-items: center;
     
-  }
+}
+    
+  
 /* 
 
 #main__body--peliculas-cards{
