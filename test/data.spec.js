@@ -1,4 +1,5 @@
-import { filterRanking } from "../src/data.js";
+import { filterRanking, getPersonajes } from "../src/data.js";
+
 
 let movies = [
   {
@@ -2898,6 +2899,16 @@ describe("filterRanking ", () => {
   
 });
 
+// describe("getPersonajes ", () => {
+//   it("getPersonajes  is a function", () => {
+//     expect(typeof getPersonajes).toBe("function");
+//   });
+
+//   it ("deberia retornar los personajes correspondientes de la pelicula previamente elegida", () => {
+//     expect (getPersonajes)
+//   })
+
+// })
 
 
 

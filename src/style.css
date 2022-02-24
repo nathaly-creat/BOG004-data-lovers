@@ -135,7 +135,7 @@ main {
     align-content: center;
 } */
 
-div #template--cards {
+#template--cards {
     margin-bottom: 30px;
     width: 130px;
     background-color: transparent;
