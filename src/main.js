@@ -1,43 +1,38 @@
 import data from "./data/ghibli/ghibli.js"
 import {filterRanking, peliculasOrden} from "./data.js"
-const peliculasData = data.films;
 
-let peliculas = document.getElementById("main__header--options-button-json");
+const peliculasData = data.films;
+const peliculas = document.getElementById("main__header--options-button-json");
 const lista = document.getElementById("main__body--peliculas-cards");
 const seccionPelicula = document.getElementById("seccion-peliculas");
 const seccionPersonajes = document.getElementById("seccion-personajes");
 const orderPeliculas= document.getElementById("orderPeliculas")
 const peliculaSeleccionada = document.getElementById("main__card--peliculas-select");
+const ranking = document.getElementById("main__header-options-button-ranking");
+const tRanking = document.getElementById("main__body-raking");
+let orderSelect = document.querySelector('.orderPeliculas')
 
-/*reload button HOME*/
-
-document.getElementById("main__header-options-boton-reload").addEventListener("click", () =>{
-  orderPeliculas.style.display= "none"
-  location.reload('div');
-  
-});
-
-
-/* Mensaje de Bienvenida*/
- let btnHome = document.getElementById('main__header-options-boton-reload');
- orderPeliculas.style.display = 'none'
- btnHome.addEventListener('click', ()=>{
-  location.reload('div');
-  
-    let welcome = document.createElement('div');
-    welcome.createElement("div");
-    welcome.innerHTML = `<div>
-    <p> Bienvenidos a la fan Pages de Studio Ghibli</p>
-    </div>`;
-    document.body.appendChild(welcome);})
- 
-  
-
-peliculas.addEventListener("click", () => {
+// manipulacion del dom para peliculas
+const domManipulationPeliculas = () => {
+  lista.style.display = "flex"
   orderPeliculas.style.display = 'inline'
-  peliculas.style.display = 'inline';
-  let template = " ";
+  tRanking.style.display = "none"
+}
+
+// manipulacion del dom para personajes
+const domManipulationPersonajes = () => {
+  lista.style.display = "none"
+  orderPeliculas.style.display= "none" /* Con none puedo ocultar el sort de las cards peliculas*/
+  seccionPersonajes.style.display = "inline"
+  seccionPelicula.style.display = "inline"  
+}
  
+// evento peliculas
+peliculas.addEventListener("click", () => {
+  domManipulationPeliculas()
+
+  let template = " ";
+  lista.innerHTML = "";
   peliculasData.forEach((obj, index) => {
     template += `
     <div id='template--cards'>
@@ -47,19 +42,17 @@ peliculas.addEventListener("click", () => {
     <button id='details-${index}'>Detalles</button>
     </div>`;
   });
+
   lista.innerHTML = template; 
   // puedo ir por el boton y asignarle un evento
   peliculasData.map(function(film, index){
-    // console.log(film,index);
     const detallesPelicula = document.getElementById('details-' + index);
+    // evento detalles
     detallesPelicula.addEventListener('click', ()=>{
       let getPeople = film.people;
-      // oculta peliculas menu
-      lista.style.display = "none"
-      // muestra seccion personajes
-      orderPeliculas.style.display= "none" /* Con none puedo ocultar el sort de las cards peliculas*/
-      seccionPersonajes.style.display = "inline"
-      seccionPelicula.style.display = "inline"
+      
+      domManipulationPersonajes()
+      peliculaSeleccionada.innerHTML = "";
       peliculaSeleccionada.innerHTML += `
         <img src="${film.poster}">
         <p>
@@ -70,6 +63,7 @@ peliculas.addEventListener("click", () => {
         </p>
       `
 
+      document.getElementById("list-personaje").innerHTML = "";
       getPeople.forEach((people) => {
       document.getElementById("list-personaje").innerHTML += `
         <div id="prueba" class="prueba-personajes">
@@ -86,17 +80,20 @@ peliculas.addEventListener("click", () => {
   });
 });
 
-// top 10 peliculas
 
-let ranking = document.getElementById("main__header-options-button-ranking");
-const tRanking = document.getElementById("main__body-raking");
-const visibilitypeliculas =  document.getElementById("main__body--peliculas-cards");
-// console.log(data)
-ranking.addEventListener("click", () => {
+
+// evento top 10 peliculas
+// manipulacion del dom para top 10 peliculas
+const domManipulationRanking = () => {
+  tRanking.style.display = "inline"
+  lista.style.display = "none"
   orderPeliculas.style.display= "none"
+}
+ 
+ranking.addEventListener("click", () => {
+  domManipulationRanking()
   let rankingTop = filterRanking(data.films);
-//  console.log(rankingTop)
-// console.log(tRanking)
+  tRanking.innerHTML = ""
   rankingTop.forEach((obj) => {
       tRanking.innerHTML += `
       <div class='filter-cards'>
@@ -105,25 +102,14 @@ ranking.addEventListener("click", () => {
         <p>Record: ${obj.rt_score}</p>
       </div>`;
   });
-  visibilitypeliculas.style.display = "none"
 });
 
-// peliculasOrden(peliculasData);
+
 // Manejo del Select con sort.
-
-let orderSelect = document.querySelector('.orderPeliculas')
 orderSelect.addEventListener('change', sortPeliculas)
-
 function sortPeliculas (e){ 
   let order = e.target.value;
   let sorting =  peliculasOrden(peliculasData, order)
   //   /*OJOOOOOOOO: quiero crear en esta seccion la manipulacion del DOM que me permita revertir la posicion de las cards, en consola si se aprecia.*/
-
-  // console.log('render1', sorting)
   return sorting; 
 }
-
-
-
-
-
