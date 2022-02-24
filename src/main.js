@@ -27,13 +27,14 @@ const domManipulationPersonajes = () => {
   seccionPelicula.style.display = "inline"  
 }
  
-// evento peliculas
-peliculas.addEventListener("click", () => {
-  domManipulationPeliculas()
 
+/**
+ * pintar 
+ */
+
+ const pintarPeliculas = (data)=>{
   let template = " ";
-  lista.innerHTML = "";
-  peliculasData.forEach((obj, index) => {
+  data.forEach((obj, index) => {
     template += `
     <div id='template--cards'>
     <img id='images' src='${obj.poster}'> 
@@ -44,6 +45,14 @@ peliculas.addEventListener("click", () => {
   });
 
   lista.innerHTML = template; 
+}
+
+
+// evento peliculas
+peliculas.addEventListener("click", () => {
+  domManipulationPeliculas()
+
+  pintarPeliculas(peliculasData)
   // puedo ir por el boton y asignarle un evento
   peliculasData.map(function(film, index){
     const detallesPelicula = document.getElementById('details-' + index);
@@ -105,11 +114,18 @@ ranking.addEventListener("click", () => {
 });
 
 
+
+
 // Manejo del Select con sort.
 orderSelect.addEventListener('change', sortPeliculas)
 function sortPeliculas (e){ 
   let order = e.target.value;
   let sorting =  peliculasOrden(peliculasData, order)
   //   /*OJOOOOOOOO: quiero crear en esta seccion la manipulacion del DOM que me permita revertir la posicion de las cards, en consola si se aprecia.*/
-  return sorting; 
+  // return sorting; 
+  console.log(sorting)
+
+  pintarPeliculas(sorting)
 }
+
+
