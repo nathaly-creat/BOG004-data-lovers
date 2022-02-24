@@ -12,7 +12,7 @@ export const peliculasOrden = (data, order)=>{
   let titleSort = data.sort((a,z)=>{
     return (a.title > z.title) ? 1:-1
   })
-  console.log(titleSort) 
+  // console.log(titleSort) 
   if(order === 'ascendente'){titleSort}
   if(order === 'descendente'){titleSort.reverse()}
  
