@@ -78,6 +78,9 @@ body {
   transition: all 200ms ease-out;
   cursor: pointer;
 }
+#main__header-options-boton-signIn:disabled{
+  background-color: rgba(68, 186, 255, 0.137);
+  }
 .main__header--options-button i {
   background-color: transparent;
   color: white;
@@ -269,11 +272,13 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+
 .filter-cards {
-  display: block;
+  display: inline-block;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.123);
   padding: 30px;
+  padding: 20px;
   height: 270px;
   width: auto;
   justify-content: center;
@@ -292,7 +297,7 @@ main {
   transform: translateY(-3%);
 }
 .filter-cards p {
-  font-size: 15px;
+  font-size: 10px;
 }
 .filter-cards img {
   height: 90%;
