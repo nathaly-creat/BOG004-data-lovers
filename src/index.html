@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script
@@ -23,7 +22,7 @@
             <!-- studio ghibli titulo principal de la pagina -->
             <div class="main__header--title">
               <figure>
-                <img src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645206938/letras_xrdjw6.png" alt="studioghibli" width="220" height="130">
+                <img src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645206938/letras_xrdjw6.png" alt="studioghibli" padding=" 20" width="420" height="180">
               </figure>
             </div>
             <div class="main__header--options" >
@@ -40,17 +39,21 @@
                 id="main__header-options-button-ranking"
                 class="main__header--options-button"
               >
-                TOP 10 PELICULAS
+                TOP 10 <i class="fa fa-filter" aria-hidden="true"></i>
               </button>
 
               <button
               id="main__header-options-boton-reload" disabled
               class="main__header--options-button"
               >
-             CONTACTO
-              </button>
+             REVISAR!!!!!
+              </button>  
               
-             
+              <select class="main__header--options-order" id="orderPeliculas"> <!-- SELECT ORDENAR -->
+                <!-- <option value="ordenar" selected>ORDENAR</option> -->
+                <option id ='ascendente' value ="ascendente" class="option" selected>Ordenar A-Z</option>
+                <option id ='descendente' value ="descendente" class="option">Ordenar Z-A</option>
+              </select>
             </div>
           </div>
         </nav>
@@ -63,14 +66,9 @@
         <!-- primera card primera vista bienvenida -->
         <!-- <div class="flex-items-2" id="main__body--welcome">
           <div id="main__body--primera-card"></div>
-        </div> -->
-
-        <!-- PRIMERA VISTA HOME TARGETAS PELICULAS -->
-        <select class="orderPeliculas" id="orderPeliculas"> <!-- SELECT ORDENAR -->
-          <option id ='ascendente' value ="ascendente" selected>Ordenar A-Z</option>
-          <option id ='descendente' value ="descendente">Ordenar Z-A</option>
-        </select>
-
+        </div> --> 
+       
+         
         <div class="flex-items">
           <div class="main__body--peliculas">
             <div id="main__body--peliculas-cards">
@@ -80,35 +78,24 @@
         </div class="'flex-items">
 
         <!-- Aqui se muestra en el DOM el filter -->
-        <div class="flex-items--filter">
-          <div id="main__body-raking"></div>
-        </div class="'flex-items">
+        <div class="filter">
+          <div id="main__body-raking">
+            <!-- aqui se pinta las cards filter top10 -->
+          </div>
+        </div>
 
         <!-- seccion card pelicula elegida -->
-      
         <div class = "main__card--peliculas" id = "seccion-peliculas">
           <h4>PELICULA</h4>
           <hr>
-          <div id = "main__card--peliculas-select">
-
-          </div>
-         </div>
-        
-        <!-- order checkbox -->
-        <!-- <div class="checkbox" id="orderCheck">
-          <input type="checkbox" id="from_A-Z" name="from_A-Z">
-          <label for="from_A-Z">De la A-Z</label>
-          <input type="checkbox" id="from_Z-A" name="from_Z-A">
-          <label for="from_Z-A">De la Z-A</label>
-        </div> -->
-
+          <div id = "main__card--peliculas-select"></div>
+        </div>
+                
         <!-- seccion personajes  -->
         <div class ="main__body--personajes" id = "seccion-personajes">
           <h4>PERSONAJES</h4>
           <hr>
-          <div id="list-personaje" class="list-personaje">
-
-          </div>
+          <div id="list-personaje" class="list-personaje"></div>
         </div>
       </section>
     </main>

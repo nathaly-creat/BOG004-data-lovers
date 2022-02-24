@@ -42,8 +42,8 @@ peliculas.addEventListener("click", () => {
     template += `
     <div id='template--cards'>
     <img id='images' src='${obj.poster}'> 
-    <p>${obj.title}</p>
-    <p>${obj.release_date}</p>
+    <p>Titulo: ${obj.title}</p>
+    <p> Estreno: ${obj.release_date}</p>
     <button id='details-${index}'>Detalles</button>
     </div>`;
   });
@@ -63,10 +63,10 @@ peliculas.addEventListener("click", () => {
       peliculaSeleccionada.innerHTML += `
         <img src="${film.poster}">
         <p>
-          <b>TITLE:</b> ${film.title} <br>
-          <b>DESCRIPTION:</b> ${film.description} <br>
-          <b>DIRECTOR:</b> ${film.director} <br>
-          <b>PRODUCER:</b> ${film.producer} <br>
+          <b>Título:</b> ${film.title} <br>
+          <b>Descripción:</b> ${film.description} <br>
+          <b>Director:</b> ${film.director} <br>
+          <b>Productor:</b> ${film.producer} <br>
         </p>
       `
 
@@ -76,7 +76,7 @@ peliculas.addEventListener("click", () => {
           <p>
           <b> Nombre: </b> ${people.name}<br>
           <img  id="images" src="${people.img}"><br>
-          <b> Genero: </b> ${people.gender}<br>
+          <b> Género: </b> ${people.gender}<br>
           <b> Edad: </b> ${people.age}<br>
           <b> Especie: </b> ${people.specie}</br>
           </p>
@@ -98,11 +98,12 @@ ranking.addEventListener("click", () => {
 //  console.log(rankingTop)
 // console.log(tRanking)
   rankingTop.forEach((obj) => {
-      tRanking.innerHTML += `<div>
+      tRanking.innerHTML += `
+      <div class='filter-cards'>
         <img src='${obj.poster}'> 
         <p>Titulo: ${obj.title}</p>
         <p>Record: ${obj.rt_score}</p>
-        </div>`;
+      </div>`;
   });
   visibilitypeliculas.style.display = "none"
 });
