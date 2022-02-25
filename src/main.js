@@ -65,10 +65,12 @@ peliculas.addEventListener("click", () => {
         <img src="${film.poster}">
         <p>
           <b>Título:</b> ${film.title} <br>
-          <b>Descripción:</b> ${film.description} <br>
           <b>Director:</b> ${film.director} <br>
-          <b>Productor:</b> ${film.producer} <br>
+          <b>Productor:</b> ${film.producer} <br><br>
+          <b>Descripción:</b> ${film.description} <br>
+          
         </p>
+        
       `
 
       document.getElementById("list-personaje").innerHTML = "";
@@ -76,8 +78,8 @@ peliculas.addEventListener("click", () => {
       document.getElementById("list-personaje").innerHTML += `
         <div id="prueba" class="prueba-personajes">
           <p>
-          <b> Nombre: </b> ${people.name}<br>
           <img  id="images" src="${people.img}"><br>
+          <b> Nombre: </b> ${people.name}<br>
           <b> Género: </b> ${people.gender}<br>
           <b> Edad: </b> ${people.age}<br>
           <b> Especie: </b> ${people.specie}</br>
@@ -95,7 +97,7 @@ peliculas.addEventListener("click", () => {
 const domManipulationRanking = () => {
   tRanking.style.display = "inline"
   lista.style.display = "none"
-  orderPeliculas.style.display= "none"
+  orderPeliculas.style.visibility= "hidden"
 }
  
 ranking.addEventListener("click", () => {
