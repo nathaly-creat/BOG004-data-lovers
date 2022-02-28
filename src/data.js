@@ -18,3 +18,8 @@ export const peliculasOrden = (data, order)=>{
  
   return titleSort;
 }
+
+// grafica
+export const yearsFilmsGraphics = (data) =>{
+  
+}
