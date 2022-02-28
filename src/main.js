@@ -6,33 +6,49 @@ const peliculas = document.getElementById("main__header--options-button-json");
 const lista = document.getElementById("main__body--peliculas-cards");
 const seccionPelicula = document.getElementById("seccion-peliculas");
 const seccionPersonajes = document.getElementById("seccion-personajes");
-const orderPeliculas= document.getElementById("orderPeliculas")
+const orderPeliculas = document.getElementById("orderPeliculas")
 const peliculaSeleccionada = document.getElementById("main__card--peliculas-select");
 const ranking = document.getElementById("main__header-options-button-ranking");
 const tRanking = document.getElementById("main__body-raking");
+const flexItemFilter = document.getElementById("flex-items--filter");
+const listDetalles = document.getElementById("list-personaje")
 let orderSelect = document.querySelector('.orderPeliculas')
 
 // manipulacion del dom para peliculas
 const domManipulationPeliculas = () => {
   lista.style.display = "flex"
-  orderPeliculas.style.display = 'inline'
+  orderPeliculas.style.display = "inline"
   tRanking.style.display = "none"
-}
+  listDetalles.style.display = "none"
+  seccionPelicula.style.display = "none"
+  seccionPersonajes.style.display = "none"
+  // orderPeliculas.style.visibility = "visible"
+} 
 
 // manipulacion del dom para personajes
 const domManipulationPersonajes = () => {
   lista.style.display = "none"
-  orderPeliculas.style.display= "none" /* Con none puedo ocultar el sort de las cards peliculas*/
+  orderPeliculas.style.display = "none" /* Con none puedo ocultar el sort de las cards peliculas*/
   seccionPersonajes.style.display = "inline"
-  seccionPelicula.style.display = "inline"  
+  seccionPelicula.style.display = "inline"
+  listDetalles.style.display = "flex"
+  flexItemFilter.style.display = "none"
+  tRanking.style.display = "inline"
 }
- 
+
+window.onload = () => {
+  flexItemFilter.style.visibility = "hidden";
+  pintarPeliculas(peliculasData);
+  mostrarDetalles(peliculasData);
+}
+
 /**
  * pintar 
  */
 
  const pintarPeliculas = (data)=>{
   let template = " ";
+  lista.innerHTML = "";
   data.forEach((obj, index) => {
     template += `
     <div id='template--cards'>
@@ -53,7 +69,12 @@ peliculas.addEventListener("click", () => {
 
   pintarPeliculas(peliculasData)
   // puedo ir por el boton y asignarle un evento
-  peliculasData.map(function(film, index){
+  mostrarDetalles(peliculasData)
+});
+
+// Mostrar detalles de las peliculas
+const mostrarDetalles = (data) => {
+  data.map(function(film, index){
     const detallesPelicula = document.getElementById('details-' + index);
     // evento detalles
     detallesPelicula.addEventListener('click', ()=>{
@@ -72,7 +93,6 @@ peliculas.addEventListener("click", () => {
         </p>
         
       `
-
       document.getElementById("list-personaje").innerHTML = "";
       getPeople.forEach((people) => {
       document.getElementById("list-personaje").innerHTML += `
@@ -88,7 +108,7 @@ peliculas.addEventListener("click", () => {
       })
     });
   });
-});
+}
 
 
 
@@ -97,7 +117,12 @@ peliculas.addEventListener("click", () => {
 const domManipulationRanking = () => {
   tRanking.style.display = "inline"
   lista.style.display = "none"
-  orderPeliculas.style.visibility= "hidden"
+  listDetalles.style.display = "none"
+  seccionPelicula.style.display = "none"
+  orderPeliculas.style.display = "none"
+  flexItemFilter.style.visibility = "visible"
+  flexItemFilter.style.display = "inherit"
+  seccionPersonajes.style.display = "none"
 }
  
 ranking.addEventListener("click", () => {
@@ -116,10 +141,12 @@ ranking.addEventListener("click", () => {
 
 // Manejo del Select con sort.
 orderSelect.addEventListener('change', sortPeliculas)
+
 function sortPeliculas (e){ 
   let order = e.target.value;
   let sorting =  peliculasOrden(peliculasData, order)
   pintarPeliculas(sorting)
+  mostrarDetalles(peliculasData);
 }
 
 
