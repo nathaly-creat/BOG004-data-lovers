@@ -20,6 +20,36 @@ export const peliculasOrden = (data, order)=>{
 }
 
 // grafica
-export const yearsFilmsGraphics = (data) =>{
+export const graphicsScore = (data) =>{
+  let arrayVacio = [];
+  let arrayRT = data.filter(films => films.rt_score > 40);
+    arrayRT.map(function(films){
+    arrayVacio.push(parseInt(films.rt_score));  
+  });
+  let sumaRT = arrayVacio.reduce((a  , b) =>{
+    return a += b
+  }, 0);  
   
-}
+  let promedio = sumaRT / arrayVacio.length;
+  console.log('promedio', promedio)
+
+  return graphicsScore;
+};
+
+ 
+
+
+
+  // let suma = new Array(sumaRT) 
+  // console.log('suma', suma)
+
+ // function mediaCalc (arrayVacio){
+//   const sumaArrayVacio = arrayVacio.reduce((a , b) =>{
+//     return a = a + b}, 0);
+//     console.log(sumaArrayVacio)
+// console.log(mediaCalc())
+
+// const media = sumaArrayVacio / arrayVacio.length;
+// return media
+
+
