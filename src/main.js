@@ -1,5 +1,5 @@
 import data from "./data/ghibli/ghibli.js"
-import {filterRanking, peliculasOrden} from "./data.js"
+import {filterRanking, peliculasOrden, graphicsScore} from "./data.js"
 
 const peliculasData = data.films;
 const peliculas = document.getElementById("main__header--options-button-json");
@@ -149,4 +149,10 @@ function sortPeliculas (e){
   mostrarDetalles(peliculasData);
 }
 
+/* COMPUTE*/
+// let grafica = document.getElementById('myChart').getContext('2d')
+// console.log(grafica)
 
+graphicsScore(data.films)
+// let filter2 = graphicsScore(data.films);
+// console.log(filter2);
