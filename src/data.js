@@ -31,10 +31,26 @@ export const graphicsScore = (data) =>{
   }, 0);  
   
   let promedio = sumaRT / arrayVacio.length;
-  console.log('promedio', promedio)
-
-  return graphicsScore;
+  return promedio
 };
+
+export const getPeliculas = (data) => {
+  let peliculas = [];
+  data.forEach(element => {
+    peliculas.push(element.title)
+  });
+  return peliculas
+}
+
+export const getRtScore = (data) => {
+  let rtScore = [];
+  data.forEach(element => {
+    rtScore.push(parseInt(element.rt_score))
+  });
+  return rtScore
+}
+
+
 
  
 

@@ -309,19 +309,25 @@ main {
   display: none;
 }
 
+#myChart {
+  border: 1px solid red;
+  visibility: visible;
+  
+}
+
 
 .flex-items--filter{
+  visibility: hidden;
   display: flex;
   justify-content: space-around;
   align-content: center;
-  background-color: black;
  
 }
 
 
 #main__body-raking {
   display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   flex-wrap: wrap;
   width: 90%;
   height: 100%;
@@ -345,11 +351,10 @@ main {
   align-items: center;
   background-image: linear-gradient(
     180deg,
-    rgb(186, 202, 38),
-    #062448,
-    #0d4b97,
-    #236dc7,
-    #00d4ff
+    #03045E,
+    #1597E5,
+    #00B4D8,
+    #90E0EF
   );
 }
 .filter-cards:hover {
@@ -428,7 +433,13 @@ i {
   .flex-container {
     background-color: rgb(0, 255, 76);
   }
+}
+
+#rtscore-chart {
   
+}
 
-
+.main__section--graph {
+  width: px;
+  height: 700px;
 }
