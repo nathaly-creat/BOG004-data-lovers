@@ -21,13 +21,13 @@ Crear una fans page agradable en tonos oscuros, adaptable a todas las pantallas 
 
 ### PROTOTIPO DE BAJA FIDELIDAD.
 - *Seccion Película.*
-![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646192655/samples/Seccion_Peliculas_DL_1_efholm.jpg)
+![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646193654/Seccion_Peliculas_DL_1_koovrg.png)
 
 - *Seccion Detalles Películas.*
-![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646192655/samples/Seccion_peliculas_detalles_ae6ggi.jpg)
+![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646193654/Seccion_peliculas_detalles_bycusl.png)
 
 - *Seccion top10 películas.*
-![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646192655/samples/seccion_top10_eesste.jpg)
+![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646193654/seccion_top10_bhaqvp.png)
 
 ### PROTOTIPO DE ALTA FIDELIDAD. 
 ![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646189711/samples/prototipo_Alta_fidelidad__dL_yf16s9.png)
