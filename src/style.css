@@ -310,19 +310,25 @@ main {
   display: none;
 }
 
+#myChart {
+  border: 1px solid red;
+  visibility: visible;
+  
+}
+
 
 .flex-items--filter{
+  visibility: hidden;
   display: flex;
   justify-content: space-around;
   align-content: center;
-  /* background-color: orangered; */
-  
+ 
 }
 
 
 #main__body-raking {
   display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   flex-wrap: wrap;
   width: 90%;
   height: 100%;
@@ -348,10 +354,9 @@ main {
   background-image: linear-gradient(
     180deg,
     #03045E,
-    #062448,
-    #0d4b97,
-    #236dc7,
-    #00d4ff
+    #1597E5,
+    #00B4D8,
+    #90E0EF
   );
 }
 .filter-cards:hover {
@@ -534,24 +539,9 @@ i {
     width: 200px;
     height: 300px;
   }
-  
-  .main__card--peliculas p {
-    background-color: #0d4b97a6;
-    padding: 10px;
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    line-height: 1;    
-    margin-bottom: 20px ;
-    
-  }
-
-  figure{
-    justify-content: center;
-    
-
-  }
-  
 }
 
-
+.main__section--graph {
+  width: px;
+  height: 700px;
+}
