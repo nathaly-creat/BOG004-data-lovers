@@ -197,10 +197,4 @@ function sortPeliculas (e){
   mostrarDetalles(peliculasData);
 }
 
-/* COMPUTE*/
-// let grafica = document.getElementById('myChart').getContext('2d')
-// console.log(grafica)
-
 graphicsScore(data.films)
-// let filter2 = graphicsScore(data.films);
-// console.log(filter2);

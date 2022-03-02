@@ -25,6 +25,7 @@ export const graphicsScore = (data) =>{
   let arrayRT = data.filter(films => films.rt_score > 40);
     arrayRT.map(function(films){
     arrayVacio.push(parseInt(films.rt_score));  
+    // console.log(arrayVacio)
   });
   let sumaRT = arrayVacio.reduce((a  , b) =>{
     return a += b
@@ -55,17 +56,5 @@ export const getRtScore = (data) => {
  
 
 
-
-  // let suma = new Array(sumaRT) 
-  // console.log('suma', suma)
-
- // function mediaCalc (arrayVacio){
-//   const sumaArrayVacio = arrayVacio.reduce((a , b) =>{
-//     return a = a + b}, 0);
-//     console.log(sumaArrayVacio)
-// console.log(mediaCalc())
-
-// const media = sumaArrayVacio / arrayVacio.length;
-// return media
 
 
