@@ -30,7 +30,8 @@ Crear una fans page agradable en tonos oscuros, adaptable a todas las pantallas 
 ![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646193654/seccion_top10_bhaqvp.png)
 
 ### PROTOTIPO DE ALTA FIDELIDAD. 
-![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646189711/samples/prototipo_Alta_fidelidad__dL_yf16s9.png)
+
+![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646250129/prototipo_Alta_fidelidad__dL_pde0vh.png)
 
 
 ### PAGINA WEB TERMINADA. 
