@@ -9,23 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://kit.fontawesome.com/4de09098c3.js" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
   </head>
   <body>
     <div id="root">
-      <!-- header -->
+      <!-- header / opciones del header -->
       <header>
-        <!-- opciones del header -->
         <nav>
           <div class="main__header--title-options">
-            <!-- studio ghibli titulo principal de la pagina -->
-            <div class="main__header--title">
+            <div class="main__header--title"><!-- studio ghibli titulo principal de la pagina -->
               <figure>
                 <img src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645206938/letras_xrdjw6.png" alt="studioghibli" width="220" height="130">
               </figure>
             </div>
-            <div class="main__header--options" >
-             
+            <div class="main__header--options">
               <button
                 method="GET"
                 name="button"
@@ -47,8 +44,6 @@
               >
              LogIn <i class="fa fa-sign-in" aria-hidden="true"></i>
               </button>
-              
-              
             </div>
           </div>
         </nav>
@@ -92,8 +87,7 @@
             
           </div>
         </div>
-        
-        
+      
         
         
         <!-- seccion personajes  -->
@@ -106,29 +100,31 @@
           </div>
         </div>
       </section>
+      <div class = "main__section--graph">
+        <canvas id="rtscore-chart" width="800" height="700"></canvas>
 
-      
+      </div>
     </main>
 
-       <!-- footer -->
-      <footer>
-        <div class="container_mail">
-          <li><a href="https://mail.google.com" class="mail" target="_blank"
-              rel="noopener noreferrer"><span>Contáctanos</span><br>studioghibli@email.com</a></li>
-            </div>
+    <!-- footer -->
+    <footer>
+      <div class="container_mail">
+        <li><a href="https://mail.google.com" class="mail" target="_blank"
+          rel="noopener noreferrer"><span>Contáctanos</span><br>studioghibli@email.com</a></li>
+      </div>
 
-        <ul>
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
-        </ul>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+      </ul>
     
-        <figure>
-          <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645193225/logo_gptvbp.png"
-            alt="Logo de Studio Ghibli" width="350" height="150">
-        </figure>
-      </footer> 
+      <figure>
+        <img class="logoFooter" src="https://res.cloudinary.com/dtaq1ip2g/image/upload/v1645193225/logo_gptvbp.png"
+          alt="Logo de Studio Ghibli" width="350" height="150">
+      </figure>
+    </footer> 
     </div>
 
     <script src="main.js" type="module"></script>
