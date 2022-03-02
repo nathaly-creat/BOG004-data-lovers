@@ -371,6 +371,20 @@ main {
 .filter-cards img {
   height: 90%;
 }
+
+/*CANVAS GRAFICA*/
+.tilte-graphics{
+  color: white;
+  font-size: 40px;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 10px;
+
+}
+.graphics {
+  background-color: rgba(37, 233, 233, 0.26);
+}
+
 /*footer*/
 footer {
   display: flex;

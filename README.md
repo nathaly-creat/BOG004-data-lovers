@@ -31,6 +31,7 @@ Crear una fans page agradable en tonos oscuros, adaptable a todas las pantallas 
 
 ### PROTOTIPO DE ALTA FIDELIDAD. 
 
+- *Ultima iteración del prototipo Final.*
 ![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646250129/prototipo_Alta_fidelidad__dL_pde0vh.png)
 
 

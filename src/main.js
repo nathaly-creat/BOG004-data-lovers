@@ -18,6 +18,7 @@ const chart = document.getElementById("rtscore-chart");
 let rtScoreChart = document.getElementById("rtscore-chart").getContext("2d");
 
 // manipulacion del dom para peliculas
+
 const rtScoreGraph = () => {
   let graphColors = [
     "rgb(0, 142, 137)", "rgb(144, 224, 239)",
@@ -31,7 +32,8 @@ const rtScoreGraph = () => {
     "rgb(133, 244, 255)", "rgb(255, 248, 154)",
     "rgb(255, 222, 222)", "rgb(255, 223, 175)"
   ]
-  let newChart = new Chart (rtScoreChart, {
+ 
+  let newChart = new Chart(rtScoreChart, {
     type: "bar",
     data:{
       labels: getPeliculas(peliculasData),
@@ -39,7 +41,7 @@ const rtScoreGraph = () => {
           type: "line",
           label: "promedio puntaje",
           data: Array(20).fill(graphicsScore(peliculasData)),
-          backgroundColor: "black"
+          
         }, {
         label:"puntaje",
         data: getRtScore(peliculasData),
@@ -48,11 +50,12 @@ const rtScoreGraph = () => {
       }]
     },
     options: {
-      indexAxis: "y"
+      indexAxis: "x"
     }
   })
   newChart;
 }
+
 
 
 const domManipulationPeliculas = () => {
