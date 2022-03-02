@@ -1,5 +1,8 @@
 import data from "./data/ghibli/ghibli.js"
 import {filterRanking, peliculasOrden, graphicsScore} from "./data.js"
+// import Chart from "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" // consultar sobre la ruta
+
+
 
 const peliculasData = data.films;
 const peliculas = document.getElementById("main__header--options-button-json");
@@ -13,6 +16,7 @@ const tRanking = document.getElementById("main__body-raking");
 const flexItemFilter = document.getElementById("flex-items--filter");
 const listDetalles = document.getElementById("list-personaje")
 let orderSelect = document.querySelector('.orderPeliculas')
+// let datoCurioso = document.getElementById('promedio')
 
 // manipulacion del dom para peliculas
 const domManipulationPeliculas = () => {
@@ -33,13 +37,14 @@ const domManipulationPersonajes = () => {
   seccionPelicula.style.display = "inline"
   listDetalles.style.display = "flex"
   flexItemFilter.style.display = "none"
-  tRanking.style.display = "inline"
+  tRanking.style.display = "grid" //pendiente era inline OJOOOOOOOOOO
 }
 
 window.onload = () => {
   flexItemFilter.style.visibility = "hidden";
   pintarPeliculas(peliculasData);
   mostrarDetalles(peliculasData);
+  graphicsScore(data.films)
 }
 
 /**
@@ -115,7 +120,7 @@ const mostrarDetalles = (data) => {
 // evento top 10 peliculas
 // manipulacion del dom para top 10 peliculas
 const domManipulationRanking = () => {
-  tRanking.style.display = "inline"
+  tRanking.style.display = "flex" // modificando decia display inline
   lista.style.display = "none"
   listDetalles.style.display = "none"
   seccionPelicula.style.display = "none"
@@ -149,10 +154,43 @@ function sortPeliculas (e){
   mostrarDetalles(peliculasData);
 }
 
-/* COMPUTE*/
-// let grafica = document.getElementById('myChart').getContext('2d')
-// console.log(grafica)
+// /* COMPUTE*/
+// let curioso = graphicsScore(data.films);
+// curioso.innerHTML = '';
+// datoCurioso.innerHTML =`
+//         <h2>DATO CURIOSO GHIBLI</h2>
+//         <p class = 'text'>Sabias que de todas estas películas el promedio de Score es de 88.8 puntos</p>`
 
 graphicsScore(data.films)
-// let filter2 = graphicsScore(data.films);
-// console.log(filter2);
+
+// const graficas = () => {
+// let Chart;
+// const ctx = document.getElementById('myChart').getContext('2d');
+// Chart.defaults.global.defaultFontColor = 'rgba(255, 102, 132, 0.2)';
+// const myChart = new Chart(ctx, {
+//   type: 'bar',
+//   data: {
+//       labels: [95, 93, 96, 97, 100, 94, 78, 91, 92, 75, 97, 89, 87, 41, 92, 95, 83, 89, 100, 92],
+//       datasets: [{
+//           label: 'Rating Score',
+//           data: [95, 93, 96, 97, 100, 94, 78, 91, 92, 75, 97, 89, 87, 41, 92, 95, 83, 89, 100, 92],
+//           backgroundColor: [
+//               'rgba(255, 99, 132, 0.2)',
+//               ],
+//           borderColor: [
+//               'rgba(255, 99, 132, 1)',
+//               ],
+//           borderWidth: 2
+//       }]
+//   },
+//   options: {
+//       scales: {
+//           y: {
+//               beginAtZero: true
+//           }
+//       }
+//   }
+// });
+// console.table(myChart)
+// }
+// graficas();
