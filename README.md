@@ -98,8 +98,7 @@ Features/características realizado:
 * Se agregó en la interfaz de usuario una sesión de visualizaciones graficas para el conocimiento de los rating score de las películas, empleando para ellos la librería Chart.js. 
 
 _Sección de Estadística sobre Rating Score._ 
-![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646186356/samples/estad%C3%ADstica_xgm0in.png)
-
+![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646193345/estad%C3%ADstica_kmlyh0.png)
 
 
 ## OBJETIVOS DE APRENDIZAJE CUBIERTOS.
