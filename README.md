@@ -101,6 +101,7 @@ _Sección de Estadística sobre Rating Score._
 ![](https://res.cloudinary.com/dtaq1ip2g/image/upload/v1646186356/samples/estad%C3%ADstica_xgm0in.png)
 
 
+
 ## OBJETIVOS DE APRENDIZAJE CUBIERTOS.
 
 ### HTML
