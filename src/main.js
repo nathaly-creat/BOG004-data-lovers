@@ -41,16 +41,16 @@ const rtScoreGraph = () => {
           type: "line",
           label: "promedio puntaje",
           data: Array(20).fill(graphicsScore(peliculasData)),
-          
+          backgroundColor: "black"
         }, {
         label:"puntaje",
         data: getRtScore(peliculasData),
         backgroundColor: graphColors,
-        color: "#000000"
+        color: "#ffffff",
       }]
     },
     options: {
-      indexAxis: "x"
+      indexAxis: "y"
     }
   })
   newChart;

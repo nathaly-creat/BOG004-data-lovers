@@ -136,11 +136,11 @@ let arrayRanking = [
 ];
 
 describe("filterRanking ", () => {
-  it(" filterRanking  is a function", () => {
+  it.only(" filterRanking  is a function", () => {
     expect(typeof filterRanking).toBe("function");
   });
 
-  it("Deberia retornar los Rating Score de Peliculas con ponderacion mayor o igual a 83", () => {
+  it.only("Deberia retornar los Rating Score de Peliculas con ponderacion mayor o igual a 83", () => {
     expect(filterRanking(movies)).toEqual(arrayRanking);
   });
 
@@ -177,19 +177,17 @@ const titleData =[
       {title: 'Castle in the Sky'},];
 
 describe("peliculasOrden", () => {
-  it(" peliculasOrden  is a function", () => {
+  it.only(" peliculasOrden  is a function", () => {
     expect(typeof peliculasOrden).toBe("function");
   });
 
-  it("Si existe en la data un array con title, retornar en orden ascendente A-Z",  () => {
+  it.only("Si existe en la data un array con title, retornar en orden ascendente A-Z",  () => {
     const orderA = "ascendente";
     expect(peliculasOrden(titleData, orderA)).toEqual(title);
   });
 
-  it("Si existe en la data un array con title, retornar en orden descendente Z-A",  () => {
+  it.only("Si existe en la data un array con title, retornar en orden descendente Z-A",  () => {
     const orderD = "descendente";
-     
-
     expect(peliculasOrden(title, orderD)).toEqual(titleDescendente);
     });
 

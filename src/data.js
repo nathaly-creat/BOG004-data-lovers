@@ -19,7 +19,7 @@ export const peliculasOrden = (data, order)=>{
   return titleSort;
 }
 
-// grafica
+// // grafica
 export const graphicsScore = (data) =>{
   let arrayVacio = [];
   let arrayRT = data.filter(films => films.rt_score > 40);
@@ -32,8 +32,10 @@ export const graphicsScore = (data) =>{
   }, 0);  
   
   let promedio = sumaRT / arrayVacio.length;
+  console.log('promedio', promedio)
   return promedio
 };
+
 
 export const getPeliculas = (data) => {
   let peliculas = [];
